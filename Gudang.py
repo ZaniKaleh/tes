@@ -31,9 +31,9 @@ def Gudangnya(role):
                                 harga = f"Rp {detail['Harga']:,.0f}".replace(",", ".")
                                 status = "Aktif" if detail['Kondisi']==1 else "Nonaktif"
                                 if role=="ADMIN":
-                                    print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>7} pcs | {harga:>16} | {status:<10}")
+                                    print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>6} pcs | {harga:>16} | {status:<10}")
                                 else:
-                                    print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>7} pcs | {harga:>16} | {'':<10}")
+                                    print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>6} pcs | {harga:>16} | {'':<10}")
                             print("="*88+"\n")
 
                         elif metode == "3":
@@ -47,23 +47,23 @@ def Gudangnya(role):
                                     harga = f"Rp {detail['Harga']:,.0f}".replace(",", ".")
                                     status = "Aktif" if detail['Kondisi']==1 else "Nonaktif"
                                     if role=="ADMIN":
-                                        print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>7} pcs | {harga:>16} | {status:<10}")
+                                        print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>6} pcs | {harga:>16} | {status:<10}")
                                     else:
-                                        print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>7} pcs | {harga:>16} | {'':<10}")
+                                        print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>6} pcs | {harga:>16} | {'':<10}")
                             print("\n"+"="*88)
                     case "2":
                         cekstok=KerjaDatabase.spilstok(role)
                         for Kategori, isikategori in cekstok.items():
                             print(f"\n>> Kategori: {Kategori.upper()}")
                             print(f"{'ID BARANG':<10} | {'NAMA BARANG':<30} | {'STOK':>10} | {'HARGA':>16} | {'STOK MIN':>10} | {'STATUS':<10}")
-                            print("-"*108)
+                            print("-"*101)
                             for Aidi, detail in isikategori.items():
                                 harga = f"Rp {detail['Harga']:,.0f}".replace(",", ".")
                                 status = "Aktif" if detail['Kondisi']==1 else "Nonaktif"
                                 if role=="ADMIN":
-                                    print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>7} pcs | {harga:>16} | {detail['Stok Minimum']:>10} | {status:<10}")
+                                    print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>6} pcs | {harga:>16} | {detail['Stok Minimum']:>10} | {status:<10}")
                                 else:
-                                    print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>7} pcs | {harga:>16} | {detail['Stok Minimum']:>10} | {'':<10}")
+                                    print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>6} pcs | {harga:>16} | {detail['Stok Minimum']:>10} | {'':<10}")
                         print("")
                         ubah=input("Masukkan ID barang yang ingin anda edit stoknya!\n").upper()
                         try:
@@ -78,7 +78,7 @@ def Gudangnya(role):
                                             harga = f"Rp {detail['Harga']:,.0f}".replace(",", ".")
                                             print(f"\n{'ID BARANG':<10} | {'NAMA BARANG':<30} | {'STOK':>10} | {'HARGA':>16}")
                                             print("-"*75)
-                                            print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>7} pcs | {harga:>16}")
+                                            print(f"{Aidi:<10} | {detail['Nama Barang']:<30} | {detail['Stok']:>6} pcs | {harga:>16}")
                                             if role=="ADMIN":
                                                 status = "Aktif" if detail['Kondisi']==1 else "Nonaktif"
                                                 print(f"Status: {status}")

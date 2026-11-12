@@ -30,9 +30,9 @@ def Kasirnya(role,username):
                                 harga = f"Rp {laina['Harga']:,.0f}".replace(",", ".")
                                 status = "Aktif" if laina['Kondisi']==1 else "Nonaktif"
                                 if role=="ADMIN":
-                                    print(f"{idi:<10} | {laina['Nama Barang']:<30} | {laina['Stok']:>7} pcs | {harga:>16} | {status:<10}")
+                                    print(f"{idi:<10} | {laina['Nama Barang']:<30} | {laina['Stok']:>6} pcs | {harga:>16} | {status:<10}")
                                 else:
-                                    print(f"{idi:<10} | {laina['Nama Barang']:<30} | {laina['Stok']:>7} pcs | {harga:>16} | {'':<10}")
+                                    print(f"{idi:<10} | {laina['Nama Barang']:<30} | {laina['Stok']:>6} pcs | {harga:>16} | {'':<10}")
                     elif kata_kunci.strip()=="999":
                         break
 
@@ -50,9 +50,9 @@ def Kasirnya(role,username):
                                     harga = f"Rp {laina['Harga']:,.0f}".replace(",", ".")
                                     status = "Aktif" if laina['Kondisi']==1 else "Nonaktif"
                                     if role=="ADMIN":
-                                        print(f"{idi:<10} | {laina['Nama Barang']:<30} | {laina['Stok']:>7} pcs | {harga:>16} | {status:<10}")
+                                        print(f"{idi:<10} | {laina['Nama Barang']:<30} | {laina['Stok']:>6} pcs | {harga:>16} | {status:<10}")
                                     else:
-                                        print(f"{idi:<10} | {laina['Nama Barang']:<30} | {laina['Stok']:>7} pcs | {harga:>16} | {'':<10}")
+                                        print(f"{idi:<10} | {laina['Nama Barang']:<30} | {laina['Stok']:>6} pcs | {harga:>16} | {'':<10}")
                                     ditemukan = True
                         if ditemukan==False:
                             print("Barang tidak ditemukan!")

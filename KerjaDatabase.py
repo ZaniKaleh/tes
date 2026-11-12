@@ -270,7 +270,7 @@ def serch(Aidibarang):
                 print(f"{'ID BARANG':<10} | {'NAMA BARANG':<30} | {'STOK':>10} | {'HARGA':>16}")
                 print("-"*75)
                 harga = f"Rp {ditails['Harga']:,.0f}".replace(",", ".")
-                print(f"{Aidiya:<10} | {ditails['Nama Barang']:<30} | {ditails['Stok']:>7} pcs | {harga:>16}")
+                print(f"{Aidiya:<10} | {ditails['Nama Barang']:<30} | {ditails['Stok']:>6} pcs | {harga:>16}")
                 return Aidiya
     return None
 
